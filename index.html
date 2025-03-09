@@ -5,65 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zakat Calculator</title>
     <link rel="stylesheet" href="styles.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6030469796907941"
-    crossorigin="anonymous"></script>
+   
 </head>
+
 <body>
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-image: url('theme2.png'); /* Path to your image */
+            background-image: url('theme1.png'); /* Path to your image */
             background-size: cover; /* Ensures the image covers the entire background */
             background-position: center; /* Centers the image */
             background-repeat: no-repeat; /* Prevents the image from repeating */
             background-attachment: fixed; /* Keeps the image fixed while scrolling */
-            color: white; /* Text color */
+            color: rgb(247, 15, 15); /* Text color */
         }
     </style>
-    <div class="background-image"></div> <!-- Background image container -->
+
+       <!-- Header Container -->
+       <header>
+        <nav>
+            <!-- Logo -->
+            <a href="index.html" class="logo">zakatcalculator.site</a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="description.html">Features</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+<main>
+<h1>
+    Zakat Calculator
+</h1>
+<br><br><br><br>
     <div class="container">
-        <h1>Zakat Calculator</h1>
-        <form id="zakatForm">
-            <!-- Gold and Silver Prices -->
-            <div class="input-group">
-                <label for="goldPrice"><i class="fas fa-coins"></i> Price of 1g Gold\ ایک گرام سونے کی قیمت :</label>
-                <input type="number" id="goldPrice" name="goldPrice" placeholder="Enter price of 1g gold">
-            </div>
-            <div class="input-group">
-                <label for="silverPrice"><i class="fas fa-coins"></i> Price of 1g Silver\ ایک گرام چاندی کی قیمت :</label>
-                <input type="number" id="silverPrice" name="silverPrice" placeholder="Enter price of 1g silver">
-            </div>
+   
+<a href="cash.html" class="button">Calculate only with cash</a><br><br>
+<a href="gold and silver.html" class="button">Calculate with Gold and Silver</a><br>
 
-            <!-- Assets and Liabilities -->
-            <div class="input-group">
-                <label for="gold"><i class="fas fa-coins"></i> Gold (Qty)\ (مقدار)سونا :</label>
-                <input type="number" id="gold" name="gold" placeholder="Enter gold in grams">
-            </div>
-            <div class="input-group">
-                <label for="silver"><i class="fas fa-coins"></i> Silver (Qty)\ چاندی(مقدار) :</label>
-                <input type="number" id="silver" name="silver" placeholder="Enter silver in grams">
-            </div>
-            <div class="input-group">
-                <label for="cash"><i class="fas fa-money-bill-wave"></i> Cash\ نقد رقم :</label>
-                <input type="number" id="cash" name="cash" placeholder="Enter cash amount">
-            </div>
-            <div class="input-group">
-                <label for="investments"><i class="fas fa-chart-line"></i> Investments\ سرمایہ کاری :</label>
-                <input type="number" id="investments" name="investments" placeholder="Enter investments amount">
-            </div>
-            <div class="input-group">
-                <label for="liabilities"><i class="fas fa-balance-scale"></i> Liabilities\ واجبات :</label>
-                <input type="number" id="liabilities" name="liabilities" placeholder="Enter liabilities amount">
-            </div>
-            <button type="button" onclick="calculateZakat()">
-                <i class="fas fa-calculator"></i> Calculate Zakat
-            </button>
-        </form>
-        <div id="result" class="result-box"></div>
-    </div>
+<!-- Share Buttons -->
+<div class="share-buttons">
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://zakatcalculator.site" target="_blank" class="share-button facebook">
+        Facebook
+    </a>
 
-    <script src="script.js"></script>
+    <!-- Twitter -->
+    <a href="https://twitter.com/intent/tweet?url=https://zakatcalculator.site&text=Calculate%20your%20Zakat%20easily%20with%20Zakat%20Calculator!" target="_blank" class="share-button twitter">
+        Twitter
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/?text=Calculate%20your%20Zakat%20easily%20with%20Zakat%20Calculator!%20https://zakatcalculator.site" target="_blank" class="share-button whatsapp">
+        WhatsApp
+    </a>
+
+    <!-- Messages -->
+    <a href="sms:?body=Check%20out%20this%20awesome%20website:%20https%3A%2F%2Fzakatcalculator.site" class="share-button sms">
+        <i class="fas fa-comment"></i> Share via SMS
+    </a>
+</div>
+
+
+</div>
+</main>
+
 </body>
 </html>

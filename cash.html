@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Zakat with Cash</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles1.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('theme2.png'); /* Path to your image */
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-attachment: fixed; /* Keeps the image fixed while scrolling */
+            color: white; /* Text color */
+        }
+    </style>
+    <div class="background-image"></div> <!-- Background image container -->
+    <div class="container">
+        <h1>Calculate Zakat with Cash</h1>
+        <form id="zakatForm">
+        <div class="input-group">
+            <label for="cash"><i class="fas fa-money-bill-wave"></i> Cash\ نقد رقم :</label>
+            <input type="number" id="cash" name="cash" placeholder="Enter cash amount">
+        </div>
+        <div class="input-group">
+            <label for="investments"><i class="fas fa-chart-line"></i> Investments\ سرمایہ کاری :</label>
+            <input type="number" id="investments" name="investments" placeholder="Enter investments amount">
+        </div>
+        <div class="input-group">
+            <label for="liabilities"><i class="fas fa-balance-scale"></i> Liabilities\ واجبات :</label>
+            <input type="number" id="liabilities" name="liabilities" placeholder="Enter liabilities amount">
+        </div>
+        <button type="button" onclick="calculateZakat()">
+            <i class="fas fa-calculator"></i> Calculate Zakat
+        </button>
+        <div id="result" class="result-box"></div>
+    </div>
+
+    <script>
+        function calculateZakat() {
+            // Example calculation logic
+            const cash = parseFloat(document.getElementById('cash').value) || 0;
+            const investments = parseFloat(document.getElementById('investments').value) || 0;
+            const liabilities = parseFloat(document.getElementById('liabilities').value) || 0;
+
+            const totalWealth = cash + investments - liabilities;
+            const zakat = totalWealth >= 0 ? totalWealth * 0.025 : 0;
+
+            const resultBox = document.getElementById('result');
+            resultBox.textContent = `Your Zakat Amount: ${zakat.toFixed(2)}`;
+            resultBox.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

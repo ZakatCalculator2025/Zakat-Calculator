@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate zakat with Gold and Silver</title>
+    <link rel="stylesheet" href="styles1.css">
+
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('theme2.png'); /* Path to your image */
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-attachment: fixed; /* Keeps the image fixed while scrolling */
+            color: white; /* Text color */
+        }
+    </style>
+    <div class="background-image"></div> <!-- Background image container -->
+    <div class="container">
+        <h1>Calculate Zakat with Gold and Silver</h1>
+        <form id="zakatForm">
+            <!-- Gold and Silver Prices -->
+            <div class="input-group">
+                <label for="goldPrice"><i class="fas fa-coins"></i> Price of 1g Gold\ ایک گرام سونے کی قیمت :</label>
+                <input type="number" id="goldPrice" name="goldPrice" placeholder="Enter price of 1g gold">
+            </div>
+            <div class="input-group">
+                <label for="silverPrice"><i class="fas fa-coins"></i> Price of 1g Silver\ ایک گرام چاندی کی قیمت :</label>
+                <input type="number" id="silverPrice" name="silverPrice" placeholder="Enter price of 1g silver">
+            </div>
+
+            <!-- Assets and Liabilities -->
+            <div class="input-group">
+                <label for="gold"><i class="fas fa-coins"></i> Gold (Qty)\ (مقدار)سونا :</label>
+                <input type="number" id="gold" name="gold" placeholder="Enter gold in grams">
+            </div>
+            <div class="input-group">
+                <label for="silver"><i class="fas fa-coins"></i> Silver (Qty)\ چاندی(مقدار) :</label>
+                <input type="number" id="silver" name="silver" placeholder="Enter silver in grams">
+            </div>
+            <div class="input-group">
+                <label for="cash"><i class="fas fa-money-bill-wave"></i> Cash\ نقد رقم :</label>
+                <input type="number" id="cash" name="cash" placeholder="Enter cash amount">
+            </div>
+            <div class="input-group">
+                <label for="investments"><i class="fas fa-chart-line"></i> Investments\ سرمایہ کاری :</label>
+                <input type="number" id="investments" name="investments" placeholder="Enter investments amount">
+            </div>
+            <div class="input-group">
+                <label for="liabilities"><i class="fas fa-balance-scale"></i> Liabilities\ واجبات :</label>
+                <input type="number" id="liabilities" name="liabilities" placeholder="Enter liabilities amount">
+            </div>
+            <button type="button" onclick="calculateZakat()">
+                <i class="fas fa-calculator"></i> Calculate Zakat
+            </button>
+        </form>
+        <div id="result" class="result-box"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

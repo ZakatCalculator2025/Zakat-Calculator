@@ -1,106 +1,193 @@
-/* styles.css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #333;
-}
-
 .container {
-    background: #DDEB9D;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    width: 350px;
-    text-align: center;
-    backdrop-filter: blur(10px);
+    text-align: center; /* Centers the link horizontally */
 }
 
-.container h1 {
-    margin: 0;
-    font-size: 30px;
-    font-weight: 600;
-    color:#143D60;
+.centered-link {
+    display: inline-block; /* Ensures the link respects text-align */
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-.header p {
-    margin: 10px 0 20px;
-    font-size: 14px;
-    color: #666;
+/* Button-style links */
+.button {
+   width: 50%;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #854836be; /* background */
+    color: white; /* White text */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 20px;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
-.input-group {
-    margin-bottom: 15px;
-    text-align: left;
+.button:hover {
+    background-color: #FFB22C; /* Darker green on hover */
 }
 
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-    color: #27667B;
+h1 {
+    font-size: 46px; /* Large font size */
+    font-family: 'Arial', sans-serif; /* Font family */
+    color: #EBE8DB; /* Text color */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center align */
+    margin-bottom: 20px; /* Add spacing below */
 }
 
-.input-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 14px;
-    transition: border-color 0.3s ease;
-}
-
-.input-group input:focus {
-    border-color: #2575fc;
-    outline: none;
-}
-
-button {
-    width: 100%;
-    padding: 12px;
-    background: #2575fc;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-button:hover {
-    background: #1a5bbf;
-}
-
-button i {
-    margin-right: 8px;
-}
-
-.result-box {
+ /* Container for share buttons */
+ .share-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
     margin-top: 20px;
-    padding: 15px;
-    background: #e3f2fd;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 500;
-    color: #2575fc;
-    animation: fadeIn 0.5s ease;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Container for share buttons */
+.share-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    justify-content: center; /* Center buttons horizontally */
+    position: fixed; /* Fix the container to the bottom */
+    bottom: 20px; /* Distance from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for exact center */
+    background-color: rgba(255, 255, 255, 0.39); /* Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
+
+
+
+/* General button styling */
+.share-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+/* Facebook button */
+.share-button.facebook {
+    background-color: #1877F2; /* Facebook blue */
+}
+
+.share-button.facebook:hover {
+    background-color: #166FE5;
+}
+
+/* Twitter button */
+.share-button.twitter {
+    background-color: #1DA1F2; /* Twitter blue */
+}
+
+.share-button.twitter:hover {
+    background-color: #1991DB;
+}
+
+/* WhatsApp button */
+.share-button.whatsapp {
+    background-color: #25d365; /* WhatsApp green */
+}
+
+.share-button.whatsapp:hover {
+    background-color: #128C7E;
+}
+
+/* SMS button */
+.share-button.sms {
+    background-color: #34B7F1; /* Light blue for SMS */
+}
+
+.share-button.sms:hover {
+    background-color: #2AA7E1;
+}
+
+
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header container */
+        header {
+            background-color: #DCD7C9; /* Blue background */
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        /* Navigation styling */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Logo styling */
+        .logo {
+            color: #2C3930;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Navigation links */
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px; /* Space between links */
+        }
+
+        .nav-links li {
+            display: inline-block;
+        }
+
+        .nav-links a {
+            color: #3F4F44;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+        }
+
+        /* Active link styling */
+        .nav-links a.active {
+            background-color: rgba(255, 255, 255, 0.2); /* Slightly darker for active link */
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                margin-top: 10px;
+            }
+
+            .nav-links a {
+                padding: 6px 10px;
+            }
+        }
